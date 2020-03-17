@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="chart-container {{showMap?'container-left':''}}">
+    <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-map" id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ec }}"></ec-canvas>
+    <cover-view style="left:{{toolTip.x}}px;top:{{toolTip.y}}px" wx:if="{{showToolTip}}" class="tool-tip">
+      <cover-view>{{toolTip.name}}{{toolTip.value}}
+        <cover-view class="nofont"></cover-view>
+      </cover-view>
+      <cover-view class="tool-detail" bindtap="checkoutDetail">
+        <cover-view>查看详情</cover-view>
+        <cover-image class="arrow" src="/img/icon/arrow.png"></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class="tool-back" wx:if="{{showBack}}">
+      <button bindtap="drawChina">返回</button>
+    </cover-view>
+  </view>
+  <view class="map-view" wx:if="{{showMap}}">
+    <map id="map" longitude="{{centerPoint.longitude}}" latitude="{{centerPoint.latitude}}" scale="11" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+    <button bindtap="backChart">返回</button>
+  </view>
+</view>

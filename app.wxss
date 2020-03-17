@@ -1,0 +1,16 @@
+
+
+view, text, button, input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button::after {
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  list-style: none;
+}

@@ -1,0 +1,3 @@
+<view class="container">
+  <ec-canvas id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ecMap }}"></ec-canvas>
+</view>

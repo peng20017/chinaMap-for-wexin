@@ -1,0 +1,96 @@
+<view class="top-wrap">
+  <tab id="category" tab-data="{{categoryMenu}}" tab-cur="{{categoryCur}}" size="{{80}}" scroll="{{false}}" bindchange="toggleCategory">
+  </tab>
+</view>
+<swiper current="{{categoryCur}}" duration="{{duration}}" bindanimationfinish="animationFinish">
+  <swiper-item wx:for="{{categoryData}}" wx:key="index">
+    <block wx:if="{{index===0}}">
+      <scroll requesting="{{item.requesting}}" end="{{item.end}}" empty-show="{{item.emptyShow}}" list-count="{{item.listData.length}}" has-top="{{true}}" refresh-size="{{66}}" bind:refresh="refresh" bind:more="more" bottomSize="{{300}}">
+        <view class="cells">
+          <view class="cell" wx:for="{{item.listData}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </scroll>
+    </block>
+    <block wx:if="{{index===1}}">
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+      <view>2222222</view>
+    </block>
+    <block wx:if="{{index===2}}">
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+      <view>3333333</view>
+    </block>
+    <block wx:if="{{index===3}}">
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+      <view>44444444</view>
+    </block>
+    <block wx:if="{{index===4}}">
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+      <view>555555</view>
+    </block>
+    <!-- <scroll requesting="{{item.requesting}}" end="{{item.end}}" empty-show="{{item.emptyShow}}" list-count="{{item.listData.length}}" has-top="{{true}}" refresh-size="{{66}}" bind:refresh="refresh" bind:more="more">
+      <view class="cells">
+        <view class="cell" wx:for="{{item.listData}}" wx:key="index" data-link="{{item.link}}" bindtap="showArticle">
+          <view class="cell__bd">
+            <view class="name">
+              <rich-text nodes="{{item.title}}"></rich-text>
+            </view>
+            <view class="tags">
+              <view class="tags__bd">
+                <view wx:for="{{item.tags}}" wx:key="name" class="tag">
+                  {{item.name}}
+                </view>
+              </view>
+              <view class="date">{{item.niceDate}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll> -->
+  </swiper-item>
+</swiper>

@@ -1,0 +1,8 @@
+/**index.wxss**/
+page {
+  background-color: #eeeeee;
+}
+ec-canvas {
+  width: 100%;
+  height: 60%;
+}
